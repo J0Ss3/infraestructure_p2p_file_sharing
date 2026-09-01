@@ -1,0 +1,32 @@
+# State. Contains every attribute of every resource in cleartext, including
+# anything an input variable carried in. Never commit it.
+terraform.tfstate
+terraform.tfstate.*
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+
+# Saved plans are state-shaped and equally cleartext.
+*.tfplan
+tf.plan
+
+# Variable files routinely hold account IDs, ARNs, and secrets.
+*.tfvars
+*.tfvars.json
+!example.tfvars
+
+# Provider binaries, module cache, and the dependency lock.
+.terraform/
+.terraform.lock.hcl
+
+# Crash logs embed the state values that were in memory.
+crash.log
+crash.*.log
+
+# Credentials that must never reach a repo.
+.env
+.env.*
+.aws/
+*.pem
+*.key
+credentials
